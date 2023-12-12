@@ -9,14 +9,9 @@ Homework:
 3. Run with release configuration and compare results ✅
 
 ```
-
-BenchmarkDotNet v0.13.11, Windows 11 (10.0.22621.2715/22H2/2022Update/SunValley2)
+BenchmarkDotNet v0.13.11,
 AMD Ryzen 9 5950X, 1 CPU, 32 logical and 16 physical cores
 .NET SDK 8.0.100
-  [Host]     : .NET 8.0.0 (8.0.23.53103), X64 RyuJIT AVX2
-  DefaultJob : .NET 8.0.0 (8.0.23.53103), X64 RyuJIT AVX2
-
-
 ```
 | Method                   | n  | Mean              | Error          | StdDev         | Ratio | Code Size | Gen0   | Allocated | Alloc Ratio |
 |------------------------- |--- |------------------:|---------------:|---------------:|------:|----------:|-------:|----------:|------------:|
@@ -29,4 +24,4 @@ AMD Ryzen 9 5950X, 1 CPU, 32 logical and 16 physical cores
 | Iterative                | 35 |          7.777 ns |      0.0605 ns |      0.0566 ns | 0.000 |      60 B |      - |         - |        0.00 |
 
 
-4. Open disassembler report and compare machine code
+4. Open [disassembler report](https://github.com/br1code/asyncexpert-course/blob/master/Module01-Introduction/Module01.Homework.FibonacciCalc-disassembly-report.html) and compare machine code ✅
