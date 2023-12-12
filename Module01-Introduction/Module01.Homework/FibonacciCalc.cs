@@ -1,11 +1,10 @@
-﻿using System.Collections.Generic;
+﻿
 using BenchmarkDotNet.Attributes;
-using BenchmarkDotNet.Diagnostics.Windows.Configs;
 
-namespace Dotnetos.AsyncExpert.Homework.Module01.Benchmark
+namespace Module01.Homework
 {
     [DisassemblyDiagnoser(exportCombinedDisassemblyReport: true)]
-    [NativeMemoryProfiler]
+    [MemoryDiagnoser]
     public class FibonacciCalc
     {
         [Benchmark(Baseline = true)]

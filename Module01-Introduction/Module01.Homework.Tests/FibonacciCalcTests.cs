@@ -1,5 +1,5 @@
+using Module01.Homework;
 using Xunit;
-using Dotnetos.AsyncExpert.Homework.Module01.Benchmark;
 
 namespace Dotnetos.AsyncExpert.Homework.Module01.Tests
 {

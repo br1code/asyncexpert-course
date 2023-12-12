@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>DisassemblyDiagnoser Output Module01.Homework.FibonacciCalc-20231212-203008</title>
+
+<style type="text/css">
+    table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+    td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: left; }
+    tr { background-color: #fff; border-top: 1px solid #ccc; }
+    tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<table>
+<thead>
+<tr><th colspan="2">FibonacciCalc.Recursive</th></tr>
+<tr>
+<th>.NET 8.0.0 (8.0.23.53103), X64 RyuJIT AVX2</th>
+<th>.NET 8.0.0 (8.0.23.53103), X64 RyuJIT AVX2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:top;"><pre><code>
+Module01.Homework.FibonacciCalc.Recursive(UInt64)
+push      rdi
+push      rsi
+push      rbp
+push      rbx
+sub       rsp,28
+mov       rsi,rcx
+mov       rbx,rdx
+cmp       rbx,1
+je        short 00007FFE7FE76D66
+cmp       rbx,2
+je        short 00007FFE7FE76D66
+lea       rdi,[rbx-2]
+cmp       rdi,1
+je        short 00007FFE7FE76D7B
+cmp       rdi,2
+je        short 00007FFE7FE76D7B
+lea       rdx,[rdi-2]
+mov       rcx,rsi
+call      qword ptr [7FFE80034C60]
+mov       rbp,rax
+lea       rdx,[rdi-1]
+mov       rcx,rsi
+call      qword ptr [7FFE80034C60]
+add       rbp,rax
+dec       rbx
+cmp       rbx,1
+je        short 00007FFE7FE76D74
+cmp       rbx,2
+je        short 00007FFE7FE76D74
+lea       rdx,[rbx-2]
+mov       rcx,rsi
+call      qword ptr [7FFE80034C60]
+mov       rdi,rax
+lea       rdx,[rbx-1]
+mov       rcx,rsi
+call      qword ptr [7FFE80034C60]
+add       rdi,rax
+lea       rax,[rdi+rbp]
+add       rsp,28
+pop       rbx
+pop       rbp
+pop       rsi
+pop       rdi
+ret
+mov       eax,1
+add       rsp,28
+pop       rbx
+pop       rbp
+pop       rsi
+pop       rdi
+ret
+mov       edi,1
+jmp       short 00007FFE7FE76D59
+mov       ebp,1
+jmp       short 00007FFE7FE76D2A
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+Module01.Homework.FibonacciCalc.Recursive(UInt64)
+push      rdi
+push      rsi
+push      rbp
+push      rbx
+sub       rsp,28
+mov       rsi,rcx
+mov       rbx,rdx
+cmp       rbx,1
+je        short 00007FFE7FE65566
+cmp       rbx,2
+je        short 00007FFE7FE65566
+lea       rdi,[rbx-2]
+cmp       rdi,1
+je        short 00007FFE7FE6557B
+cmp       rdi,2
+je        short 00007FFE7FE6557B
+lea       rdx,[rdi-2]
+mov       rcx,rsi
+call      qword ptr [7FFE80024C60]
+mov       rbp,rax
+lea       rdx,[rdi-1]
+mov       rcx,rsi
+call      qword ptr [7FFE80024C60]
+add       rbp,rax
+dec       rbx
+cmp       rbx,1
+je        short 00007FFE7FE65574
+cmp       rbx,2
+je        short 00007FFE7FE65574
+lea       rdx,[rbx-2]
+mov       rcx,rsi
+call      qword ptr [7FFE80024C60]
+mov       rdi,rax
+lea       rdx,[rbx-1]
+mov       rcx,rsi
+call      qword ptr [7FFE80024C60]
+add       rdi,rax
+lea       rax,[rdi+rbp]
+add       rsp,28
+pop       rbx
+pop       rbp
+pop       rsi
+pop       rdi
+ret
+mov       eax,1
+add       rsp,28
+pop       rbx
+pop       rbp
+pop       rsi
+pop       rdi
+ret
+mov       edi,1
+jmp       short 00007FFE7FE65559
+mov       ebp,1
+jmp       short 00007FFE7FE6552A
+
+</code></pre></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="2">FibonacciCalc.RecursiveWithMemoization</th></tr>
+<tr>
+<th>.NET 8.0.0 (8.0.23.53103), X64 RyuJIT AVX2</th>
+<th>.NET 8.0.0 (8.0.23.53103), X64 RyuJIT AVX2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:top;"><pre><code>
+Module01.Homework.FibonacciCalc.RecursiveWithMemoization(UInt64)
+push      rdi
+push      rsi
+push      rbx
+sub       rsp,20
+mov       rbx,rcx
+mov       rsi,rdx
+mov       rcx,offset MT_System.Collections.Generic.Dictionary`2[[System.UInt64, System.Private.CoreLib],[System.UInt64, System.Private.CoreLib]]
+call      CORINFO_HELP_NEWSFAST
+mov       rdi,rax
+mov       rcx,rdi
+xor       edx,edx
+xor       r8d,r8d
+call      qword ptr [7FFE80245FC8]
+mov       rcx,rbx
+mov       rdx,rsi
+mov       r8,rdi
+add       rsp,20
+pop       rbx
+pop       rsi
+pop       rdi
+jmp       qword ptr [7FFE80034C90]
+
+System.Collections.Generic.Dictionary`2[[System.UInt64, System.Private.CoreLib],[System.UInt64, System.Private.CoreLib]]..ctor(Int32, System.Collections.Generic.IEqualityComparer`1<UInt64>)
+push      rsi
+push      rbx
+sub       rsp,28
+mov       rsi,rcx
+mov       rbx,r8
+test      edx,edx
+jl        short 00007FFE7FE7A9D9
+test      edx,edx
+jle       short 00007FFE7FE7A9CD
+mov       rcx,rsi
+call      qword ptr [7FFE80246280]
+test      rbx,rbx
+jne       short 00007FFE7FE7A9E5
+add       rsp,28
+pop       rbx
+pop       rsi
+ret
+mov       ecx,16
+call      qword ptr [7FFE7FFDED00]
+int       3
+mov       rcx,1F779401F00
+cmp       rbx,[rcx]
+je        short 00007FFE7FE7A9D2
+lea       rcx,[rsi+18]
+mov       rdx,rbx
+call      CORINFO_HELP_ASSIGN_REF
+jmp       short 00007FFE7FE7A9D2
+
+Module01.Homework.FibonacciCalc.RecursiveMemo(UInt64, System.Collections.Generic.Dictionary`2<UInt64,UInt64>)
+push      r15
+push      r14
+push      r13
+push      r12
+push      rdi
+push      rsi
+push      rbp
+push      rbx
+sub       rsp,38
+mov       rdi,rcx
+mov       rsi,rdx
+mov       rbx,r8
+mov       rax,rsi
+mov       rcx,[rbx+8]
+test      rcx,rcx
+je        near ptr 00007FFE7FE79B61
+mov       rbp,[rbx+18]
+test      rbp,rbp
+jne       near ptr 00007FFE7FE79BDF
+mov       r8,rsi
+shr       r8,20
+xor       eax,r8d
+mov       edx,eax
+imul      rdx,[rbx+30]
+shr       rdx,20
+inc       rdx
+mov       r11d,[rcx+8]
+mov       r8d,r11d
+imul      rdx,r8
+shr       rdx,20
+cmp       edx,r11d
+jae       near ptr 00007FFE7FE79DB6
+mov       edx,edx
+mov       r14d,[rcx+rdx*4+10]
+mov       r15,[rbx+10]
+xor       r13d,r13d
+dec       r14d
+mov       r12d,[r15+8]
+cmp       r12d,r14d
+jbe       near ptr 00007FFE7FE79B61
+mov       ecx,r14d
+lea       rcx,[rcx+rcx*2]
+lea       r14,[r15+rcx*8+10]
+cmp       [r14],eax
+jne       near ptr 00007FFE7FE79D10
+cmp       [r14+8],rsi
+jne       near ptr 00007FFE7FE79D10
+cmp       [r14],r14b
+lea       rax,[r14+10]
+test      rax,rax
+je        short 00007FFE7FE799C3
+mov       rax,[rax]
+add       rsp,38
+pop       rbx
+pop       rbp
+pop       rsi
+pop       rdi
+pop       r12
+pop       r13
+pop       r14
+pop       r15
+ret
+cmp       rsi,2
+jbe       near ptr 00007FFE7FE79AC6
+lea       r15,[rsi-1]
+mov       rax,r15
+cmp       qword ptr [rbx+8],0
+je        near ptr 00007FFE7FE79BBE
+mov       r13,[rbx+18]
+test      r13,r13
+jne       near ptr 00007FFE7FE79C71
+mov       r8,r15
+shr       r8,20
+xor       eax,r8d
+mov       rcx,[rbx+8]
+mov       edx,eax
+imul      rdx,[rbx+30]
+shr       rdx,20
+inc       rdx
+mov       r11d,[rcx+8]
+mov       r8d,r11d
+imul      rdx,r8
+shr       rdx,20
+cmp       edx,r11d
+jae       near ptr 00007FFE7FE79DB6
+mov       edx,edx
+mov       r12d,[rcx+rdx*4+10]
+mov       r8,[rbx+10]
+xor       r10d,r10d
+dec       r12d
+mov       r9d,[r8+8]
+cmp       r9d,r12d
+jbe       near ptr 00007FFE7FE79BBE
+mov       ecx,r12d
+lea       rcx,[rcx+rcx*2]
+lea       r14,[r8+rcx*8+10]
+cmp       [r14],eax
+jne       near ptr 00007FFE7FE79C5F
+cmp       [r14+8],r15
+jne       near ptr 00007FFE7FE79C5F
+cmp       [r14],r14b
+lea       rcx,[r14+10]
+test      rcx,rcx
+je        short 00007FFE7FE79AE0
+mov       r14,[rcx]
+lea       rbp,[rsi-2]
+mov       rcx,rbx
+mov       rdx,rbp
+call      qword ptr [7FFE80246268]
+test      rax,rax
+je        near ptr 00007FFE7FE79B3C
+mov       r8,[rax]
+add       r8,r14
+mov       rcx,rbx
+mov       rdx,rsi
+mov       r9d,1
+call      qword ptr [7FFE80246298]
+mov       rcx,rbx
+mov       rdx,rsi
+call      qword ptr [7FFE80246268]
+test      rax,rax
+je        near ptr 00007FFE7FE79D06
+mov       rax,[rax]
+add       rsp,38
+pop       rbx
+pop       rbp
+pop       rsi
+pop       rdi
+pop       r12
+pop       r13
+pop       r14
+pop       r15
+ret
+mov       rcx,rbx
+mov       rdx,rsi
+mov       r8d,1
+mov       r9d,1
+call      qword ptr [7FFE80246298]
+jmp       short 00007FFE7FE79A9D
+cmp       r15,2
+jbe       short 00007FFE7FE79B47
+lea       rdx,[r15-1]
+mov       rcx,rdi
+mov       r8,rbx
+call      qword ptr [7FFE80034C90]
+mov       r14,rax
+lea       rdx,[r15-2]
+mov       rcx,rdi
+mov       r8,rbx
+call      qword ptr [7FFE80034C90]
+lea       r8,[r14+rax]
+mov       rcx,rbx
+mov       rdx,r15
+mov       r9d,1
+call      qword ptr [7FFE80246298]
+mov       rcx,rbx
+mov       rdx,r15
+call      qword ptr [7FFE80246268]
+test      rax,rax
+je        near ptr 00007FFE7FE79CF2
+mov       r14,[rax]
+jmp       near ptr 00007FFE7FE79A6C
+cmp       rbp,2
+ja        short 00007FFE7FE79B68
+jmp       near ptr 00007FFE7FE79BC5
+mov       rcx,rbx
+mov       rdx,r15
+mov       r8d,1
+mov       r9d,1
+call      qword ptr [7FFE80246298]
+jmp       short 00007FFE7FE79B1F
+xor       eax,eax
+jmp       near ptr 00007FFE7FE799AA
+lea       rdx,[rbp-1]
+mov       rcx,rdi
+mov       r8,rbx
+call      qword ptr [7FFE80034C90]
+mov       r15,rax
+lea       rdx,[rbp-2]
+mov       rcx,rdi
+mov       r8,rbx
+call      qword ptr [7FFE80034C90]
+lea       r8,[r15+rax]
+mov       rcx,rbx
+mov       rdx,rbp
+mov       r9d,1
+call      qword ptr [7FFE80246298]
+mov       rcx,rbx
+mov       rdx,rbp
+call      qword ptr [7FFE80246268]
+test      rax,rax
+je        near ptr 00007FFE7FE79CFC
+mov       r8,[rax]
+jmp       near ptr 00007FFE7FE79A88
+xor       ecx,ecx
+jmp       near ptr 00007FFE7FE79A64
+mov       rcx,rbx
+mov       rdx,rbp
+mov       r8d,1
+mov       r9d,1
+call      qword ptr [7FFE80246298]
+jmp       short 00007FFE7FE79BA1
+mov       rcx,rbp
+mov       rdx,rsi
+mov       r11,7FFE7FD004F0
+call      qword ptr [r11]
+mov       r15d,eax
+mov       rax,[rbx+8]
+mov       ecx,r15d
+imul      rcx,[rbx+30]
+shr       rcx,20
+inc       rcx
+mov       edx,[rax+8]
+mov       r8d,edx
+imul      rcx,r8
+shr       rcx,20
+cmp       ecx,edx
+jae       near ptr 00007FFE7FE79DB6
+mov       ecx,ecx
+mov       eax,[rax+rcx*4+10]
+mov       r12,[rbx+10]
+xor       r13d,r13d
+dec       eax
+mov       r14d,[r12+8]
+cmp       r14d,eax
+jbe       near ptr 00007FFE7FE79B61
+mov       eax,eax
+lea       rax,[rax+rax*2]
+lea       rax,[r12+rax*8+10]
+cmp       [rax],r15d
+je        near ptr 00007FFE7FE79D22
+mov       eax,[rax+4]
+inc       r13d
+cmp       r14d,r13d
+jae       short 00007FFE7FE79C2D
+jmp       near ptr 00007FFE7FE79CEB
+mov       r12d,[r14+4]
+inc       r10d
+cmp       r9d,r10d
+jae       near ptr 00007FFE7FE79A35
+jmp       short 00007FFE7FE79CEB
+mov       rcx,r13
+mov       rdx,r15
+mov       r11,7FFE7FD00500
+call      qword ptr [r11]
+mov       r12d,eax
+mov       rcx,[rbx+8]
+mov       edx,r12d
+imul      rdx,[rbx+30]
+shr       rdx,20
+inc       rdx
+mov       r8d,[rcx+8]
+mov       r9d,r8d
+imul      rdx,r9
+shr       rdx,20
+cmp       edx,r8d
+jae       near ptr 00007FFE7FE79DB6
+mov       edx,edx
+mov       ecx,[rcx+rdx*4+10]
+mov       rbp,[rbx+10]
+xor       r14d,r14d
+dec       ecx
+mov       eax,[rbp+8]
+cmp       eax,ecx
+jbe       near ptr 00007FFE7FE79BBE
+mov       ecx,ecx
+lea       rcx,[rcx+rcx*2]
+lea       rcx,[rbp+rcx*8+10]
+cmp       [rcx],r12d
+je        near ptr 00007FFE7FE79D61
+mov       ecx,[rcx+4]
+inc       r14d
+cmp       eax,r14d
+jae       short 00007FFE7FE79CC1
+call      qword ptr [7FFE7FFDF000]
+int       3
+mov       rcx,r15
+call      qword ptr [7FFE802467A8]
+int       3
+mov       rcx,rbp
+call      qword ptr [7FFE802467A8]
+int       3
+mov       rcx,rsi
+call      qword ptr [7FFE802467A8]
+int       3
+mov       r14d,[r14+4]
+inc       r13d
+cmp       r12d,r13d
+jae       near ptr 00007FFE7FE7997B
+jmp       short 00007FFE7FE79CEB
+mov       [rsp+28],rax
+mov       rdx,[rax+8]
+mov       rcx,rbp
+mov       r8,rsi
+mov       r11,7FFE7FD004F8
+call      qword ptr [r11]
+test      eax,eax
+jne       short 00007FFE7FE79D57
+mov       eax,r14d
+mov       r14,[rsp+28]
+mov       ecx,eax
+mov       rax,r14
+mov       r14d,ecx
+jmp       near ptr 00007FFE7FE79C4F
+mov       r14,[rsp+28]
+jmp       near ptr 00007FFE7FE799A3
+mov       [rsp+34],eax
+mov       [rsp+20],rcx
+mov       rdx,[rcx+8]
+mov       rcx,r13
+mov       r8,r15
+mov       r11,7FFE7FD00508
+call      qword ptr [r11]
+test      eax,eax
+jne       short 00007FFE7FE79DAC
+mov       eax,r12d
+mov       r12,rbp
+mov       ebp,r14d
+mov       ecx,[rsp+34]
+mov       r14,[rsp+20]
+mov       edx,eax
+mov       eax,ecx
+mov       rcx,r14
+mov       r14d,ebp
+mov       rbp,r12
+mov       r12d,edx
+jmp       near ptr 00007FFE7FE79CE0
+mov       r14,[rsp+20]
+jmp       near ptr 00007FFE7FE79A5D
+call      CORINFO_HELP_RNGCHKFAIL
+int       3
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+Module01.Homework.FibonacciCalc.RecursiveWithMemoization(UInt64)
+push      rdi
+push      rsi
+push      rbx
+sub       rsp,20
+mov       rbx,rcx
+mov       rsi,rdx
+mov       rcx,offset MT_System.Collections.Generic.Dictionary`2[[System.UInt64, System.Private.CoreLib],[System.UInt64, System.Private.CoreLib]]
+call      CORINFO_HELP_NEWSFAST
+mov       rdi,rax
+mov       rcx,rdi
+xor       edx,edx
+xor       r8d,r8d
+call      qword ptr [7FFE80215FC8]
+mov       rcx,rbx
+mov       rdx,rsi
+mov       r8,rdi
+add       rsp,20
+pop       rbx
+pop       rsi
+pop       rdi
+jmp       qword ptr [7FFE80004C90]
+
+System.Collections.Generic.Dictionary`2[[System.UInt64, System.Private.CoreLib],[System.UInt64, System.Private.CoreLib]]..ctor(Int32, System.Collections.Generic.IEqualityComparer`1<UInt64>)
+push      rsi
+push      rbx
+sub       rsp,28
+mov       rsi,rcx
+mov       rbx,r8
+test      edx,edx
+jl        short 00007FFE7FE4A9F9
+test      edx,edx
+jle       short 00007FFE7FE4A9ED
+mov       rcx,rsi
+call      qword ptr [7FFE80216280]
+test      rbx,rbx
+jne       short 00007FFE7FE4AA05
+add       rsp,28
+pop       rbx
+pop       rsi
+ret
+mov       ecx,16
+call      qword ptr [7FFE7FFAED00]
+int       3
+mov       rcx,15D8E801F00
+cmp       rbx,[rcx]
+je        short 00007FFE7FE4A9F2
+lea       rcx,[rsi+18]
+mov       rdx,rbx
+call      CORINFO_HELP_ASSIGN_REF
+jmp       short 00007FFE7FE4A9F2
+
+Module01.Homework.FibonacciCalc.RecursiveMemo(UInt64, System.Collections.Generic.Dictionary`2<UInt64,UInt64>)
+push      r15
+push      r14
+push      r13
+push      r12
+push      rdi
+push      rsi
+push      rbp
+push      rbx
+sub       rsp,38
+mov       rdi,rcx
+mov       rsi,rdx
+mov       rbx,r8
+mov       rax,rsi
+mov       rcx,[rbx+8]
+test      rcx,rcx
+je        near ptr 00007FFE7FE49D21
+mov       rbp,[rbx+18]
+test      rbp,rbp
+jne       near ptr 00007FFE7FE49D9F
+mov       r8,rsi
+shr       r8,20
+xor       eax,r8d
+mov       edx,eax
+imul      rdx,[rbx+30]
+shr       rdx,20
+inc       rdx
+mov       r11d,[rcx+8]
+mov       r8d,r11d
+imul      rdx,r8
+shr       rdx,20
+cmp       edx,r11d
+jae       near ptr 00007FFE7FE49F76
+mov       edx,edx
+mov       r14d,[rcx+rdx*4+10]
+mov       r15,[rbx+10]
+xor       r13d,r13d
+dec       r14d
+mov       r12d,[r15+8]
+cmp       r12d,r14d
+jbe       near ptr 00007FFE7FE49D21
+mov       ecx,r14d
+lea       rcx,[rcx+rcx*2]
+lea       r14,[r15+rcx*8+10]
+cmp       [r14],eax
+jne       near ptr 00007FFE7FE49ED0
+cmp       [r14+8],rsi
+jne       near ptr 00007FFE7FE49ED0
+cmp       [r14],r14b
+lea       rax,[r14+10]
+test      rax,rax
+je        short 00007FFE7FE49B83
+mov       rax,[rax]
+add       rsp,38
+pop       rbx
+pop       rbp
+pop       rsi
+pop       rdi
+pop       r12
+pop       r13
+pop       r14
+pop       r15
+ret
+cmp       rsi,2
+jbe       near ptr 00007FFE7FE49C86
+lea       r15,[rsi-1]
+mov       rax,r15
+cmp       qword ptr [rbx+8],0
+je        near ptr 00007FFE7FE49D7E
+mov       r13,[rbx+18]
+test      r13,r13
+jne       near ptr 00007FFE7FE49E31
+mov       r8,r15
+shr       r8,20
+xor       eax,r8d
+mov       rcx,[rbx+8]
+mov       edx,eax
+imul      rdx,[rbx+30]
+shr       rdx,20
+inc       rdx
+mov       r11d,[rcx+8]
+mov       r8d,r11d
+imul      rdx,r8
+shr       rdx,20
+cmp       edx,r11d
+jae       near ptr 00007FFE7FE49F76
+mov       edx,edx
+mov       r12d,[rcx+rdx*4+10]
+mov       r8,[rbx+10]
+xor       r10d,r10d
+dec       r12d
+mov       r9d,[r8+8]
+cmp       r9d,r12d
+jbe       near ptr 00007FFE7FE49D7E
+mov       ecx,r12d
+lea       rcx,[rcx+rcx*2]
+lea       r14,[r8+rcx*8+10]
+cmp       [r14],eax
+jne       near ptr 00007FFE7FE49E1F
+cmp       [r14+8],r15
+jne       near ptr 00007FFE7FE49E1F
+cmp       [r14],r14b
+lea       rcx,[r14+10]
+test      rcx,rcx
+je        short 00007FFE7FE49CA0
+mov       r14,[rcx]
+lea       rbp,[rsi-2]
+mov       rcx,rbx
+mov       rdx,rbp
+call      qword ptr [7FFE80216268]
+test      rax,rax
+je        near ptr 00007FFE7FE49CFC
+mov       r8,[rax]
+add       r8,r14
+mov       rcx,rbx
+mov       rdx,rsi
+mov       r9d,1
+call      qword ptr [7FFE80216298]
+mov       rcx,rbx
+mov       rdx,rsi
+call      qword ptr [7FFE80216268]
+test      rax,rax
+je        near ptr 00007FFE7FE49EC6
+mov       rax,[rax]
+add       rsp,38
+pop       rbx
+pop       rbp
+pop       rsi
+pop       rdi
+pop       r12
+pop       r13
+pop       r14
+pop       r15
+ret
+mov       rcx,rbx
+mov       rdx,rsi
+mov       r8d,1
+mov       r9d,1
+call      qword ptr [7FFE80216298]
+jmp       short 00007FFE7FE49C5D
+cmp       r15,2
+jbe       short 00007FFE7FE49D07
+lea       rdx,[r15-1]
+mov       rcx,rdi
+mov       r8,rbx
+call      qword ptr [7FFE80004C90]
+mov       r14,rax
+lea       rdx,[r15-2]
+mov       rcx,rdi
+mov       r8,rbx
+call      qword ptr [7FFE80004C90]
+lea       r8,[r14+rax]
+mov       rcx,rbx
+mov       rdx,r15
+mov       r9d,1
+call      qword ptr [7FFE80216298]
+mov       rcx,rbx
+mov       rdx,r15
+call      qword ptr [7FFE80216268]
+test      rax,rax
+je        near ptr 00007FFE7FE49EB2
+mov       r14,[rax]
+jmp       near ptr 00007FFE7FE49C2C
+cmp       rbp,2
+ja        short 00007FFE7FE49D28
+jmp       near ptr 00007FFE7FE49D85
+mov       rcx,rbx
+mov       rdx,r15
+mov       r8d,1
+mov       r9d,1
+call      qword ptr [7FFE80216298]
+jmp       short 00007FFE7FE49CDF
+xor       eax,eax
+jmp       near ptr 00007FFE7FE49B6A
+lea       rdx,[rbp-1]
+mov       rcx,rdi
+mov       r8,rbx
+call      qword ptr [7FFE80004C90]
+mov       r15,rax
+lea       rdx,[rbp-2]
+mov       rcx,rdi
+mov       r8,rbx
+call      qword ptr [7FFE80004C90]
+lea       r8,[r15+rax]
+mov       rcx,rbx
+mov       rdx,rbp
+mov       r9d,1
+call      qword ptr [7FFE80216298]
+mov       rcx,rbx
+mov       rdx,rbp
+call      qword ptr [7FFE80216268]
+test      rax,rax
+je        near ptr 00007FFE7FE49EBC
+mov       r8,[rax]
+jmp       near ptr 00007FFE7FE49C48
+xor       ecx,ecx
+jmp       near ptr 00007FFE7FE49C24
+mov       rcx,rbx
+mov       rdx,rbp
+mov       r8d,1
+mov       r9d,1
+call      qword ptr [7FFE80216298]
+jmp       short 00007FFE7FE49D61
+mov       rcx,rbp
+mov       rdx,rsi
+mov       r11,7FFE7FCD0500
+call      qword ptr [r11]
+mov       r15d,eax
+mov       rax,[rbx+8]
+mov       ecx,r15d
+imul      rcx,[rbx+30]
+shr       rcx,20
+inc       rcx
+mov       edx,[rax+8]
+mov       r8d,edx
+imul      rcx,r8
+shr       rcx,20
+cmp       ecx,edx
+jae       near ptr 00007FFE7FE49F76
+mov       ecx,ecx
+mov       eax,[rax+rcx*4+10]
+mov       r12,[rbx+10]
+xor       r13d,r13d
+dec       eax
+mov       r14d,[r12+8]
+cmp       r14d,eax
+jbe       near ptr 00007FFE7FE49D21
+mov       eax,eax
+lea       rax,[rax+rax*2]
+lea       rax,[r12+rax*8+10]
+cmp       [rax],r15d
+je        near ptr 00007FFE7FE49EE2
+mov       eax,[rax+4]
+inc       r13d
+cmp       r14d,r13d
+jae       short 00007FFE7FE49DED
+jmp       near ptr 00007FFE7FE49EAB
+mov       r12d,[r14+4]
+inc       r10d
+cmp       r9d,r10d
+jae       near ptr 00007FFE7FE49BF5
+jmp       short 00007FFE7FE49EAB
+mov       rcx,r13
+mov       rdx,r15
+mov       r11,7FFE7FCD0510
+call      qword ptr [r11]
+mov       r12d,eax
+mov       rcx,[rbx+8]
+mov       edx,r12d
+imul      rdx,[rbx+30]
+shr       rdx,20
+inc       rdx
+mov       r8d,[rcx+8]
+mov       r9d,r8d
+imul      rdx,r9
+shr       rdx,20
+cmp       edx,r8d
+jae       near ptr 00007FFE7FE49F76
+mov       edx,edx
+mov       ecx,[rcx+rdx*4+10]
+mov       rbp,[rbx+10]
+xor       r14d,r14d
+dec       ecx
+mov       eax,[rbp+8]
+cmp       eax,ecx
+jbe       near ptr 00007FFE7FE49D7E
+mov       ecx,ecx
+lea       rcx,[rcx+rcx*2]
+lea       rcx,[rbp+rcx*8+10]
+cmp       [rcx],r12d
+je        near ptr 00007FFE7FE49F21
+mov       ecx,[rcx+4]
+inc       r14d
+cmp       eax,r14d
+jae       short 00007FFE7FE49E81
+call      qword ptr [7FFE7FFAF000]
+int       3
+mov       rcx,r15
+call      qword ptr [7FFE802167A8]
+int       3
+mov       rcx,rbp
+call      qword ptr [7FFE802167A8]
+int       3
+mov       rcx,rsi
+call      qword ptr [7FFE802167A8]
+int       3
+mov       r14d,[r14+4]
+inc       r13d
+cmp       r12d,r13d
+jae       near ptr 00007FFE7FE49B3B
+jmp       short 00007FFE7FE49EAB
+mov       [rsp+28],rax
+mov       rdx,[rax+8]
+mov       rcx,rbp
+mov       r8,rsi
+mov       r11,7FFE7FCD0508
+call      qword ptr [r11]
+test      eax,eax
+jne       short 00007FFE7FE49F17
+mov       eax,r14d
+mov       r14,[rsp+28]
+mov       ecx,eax
+mov       rax,r14
+mov       r14d,ecx
+jmp       near ptr 00007FFE7FE49E0F
+mov       r14,[rsp+28]
+jmp       near ptr 00007FFE7FE49B63
+mov       [rsp+34],eax
+mov       [rsp+20],rcx
+mov       rdx,[rcx+8]
+mov       rcx,r13
+mov       r8,r15
+mov       r11,7FFE7FCD0518
+call      qword ptr [r11]
+test      eax,eax
+jne       short 00007FFE7FE49F6C
+mov       eax,r12d
+mov       r12,rbp
+mov       ebp,r14d
+mov       ecx,[rsp+34]
+mov       r14,[rsp+20]
+mov       edx,eax
+mov       eax,ecx
+mov       rcx,r14
+mov       r14d,ebp
+mov       rbp,r12
+mov       r12d,edx
+jmp       near ptr 00007FFE7FE49EA0
+mov       r14,[rsp+20]
+jmp       near ptr 00007FFE7FE49C1D
+call      CORINFO_HELP_RNGCHKFAIL
+int       3
+
+</code></pre></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr><th colspan="2">FibonacciCalc.Iterative</th></tr>
+<tr>
+<th>.NET 8.0.0 (8.0.23.53103), X64 RyuJIT AVX2</th>
+<th>.NET 8.0.0 (8.0.23.53103), X64 RyuJIT AVX2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="vertical-align:top;"><pre><code>
+Module01.Homework.FibonacciCalc.Iterative(UInt64)
+cmp       rdx,2
+jbe       short 00007FFE7FE76E36
+mov       eax,1
+mov       ecx,1
+xor       r8d,r8d
+mov       r10d,3
+cmp       rdx,3
+jb        short 00007FFE7FE76E32
+nop
+lea       r8,[rax+rcx]
+mov       rax,rcx
+mov       rcx,r8
+inc       r10
+cmp       r10,rdx
+jbe       short 00007FFE7FE76E20
+mov       rax,r8
+ret
+mov       eax,1
+ret
+
+</code></pre></td>
+<td style="vertical-align:top;"><pre><code>
+Module01.Homework.FibonacciCalc.Iterative(UInt64)
+cmp       rdx,2
+jbe       short 00007FFE7FE76E36
+mov       eax,1
+mov       ecx,1
+xor       r8d,r8d
+mov       r10d,3
+cmp       rdx,3
+jb        short 00007FFE7FE76E32
+nop
+lea       r8,[rax+rcx]
+mov       rax,rcx
+mov       rcx,r8
+inc       r10
+cmp       r10,rdx
+jbe       short 00007FFE7FE76E20
+mov       rax,r8
+ret
+mov       eax,1
+ret
+
+</code></pre></td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
