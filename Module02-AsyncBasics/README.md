@@ -2,8 +2,11 @@
 
 Homework:
 
-1. Implement methods from `ThreadPool.Exercises.Core` project to pass tests from `ThreadPoolExercises.Tests`.
-2. Use `ThreadPoolExercises.Benchmarks` to benchmark implemented methods.
+1. Implement methods from `ThreadPool.Exercises.Core` project to pass tests from `ThreadPoolExercises.Tests`. ✅
+
+![image](https://github.com/br1code/asyncexpert-course/assets/17786059/65671f24-8096-41a0-97a5-1528d75feccf)
+
+2. Use `ThreadPoolExercises.Benchmarks` to benchmark implemented methods. ✅
 
 ```ini
 BenchmarkDotNet=v0.12.1
