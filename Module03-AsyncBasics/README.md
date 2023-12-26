@@ -10,3 +10,5 @@ Homework:
   - HTTP call thrown an exception (like network connectivity or DNS issue)
 - Token should be able to cancel both HTTP call and the retry delay
 - If all retries fails, the method should throw the exception of the last try
+
+![image](https://github.com/br1code/asyncexpert-course/assets/17786059/f2d1b74d-09b0-40a0-890a-ad5e85e6f71a)
